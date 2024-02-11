@@ -1,4 +1,5 @@
-class LinkedList {
+
+public class LinkedList {
     Node head;
 
     class Node{
@@ -11,53 +12,58 @@ class LinkedList {
         }
     }
 
-    // insert the node at the very end in the linked list
-    public void insertAtEnd(int newData){
-        // intialize the newNode with the newData entered by the user
-        Node newNode = new Node(newData);
+    // implimentation  of insertion of a node at the end 
 
-        // LinkedList is empty
+    public void insertAtEnd(int newData){
+        node new Node(newData);
+
+        // linkedlist is empty
+
         if(head == null){
-            head = new Node(newData);
+            head = new (newData);
             return;
         }
+    
 
-        // LinkedList is not empty
+        // linkedlist is not empty
         newNode.next = null;
-        // traversing the linkedlist at the end of the node
         Node temp = head;
-        while(temp.next != null){
+        while (temp.next != null) {
             temp = temp.next;
+            
         }
 
         temp.next = newNode;
         return;
     }
-
-    // display all the nodes after the insertion
-    public void printNodes(){
+    // implimentation of displaying the linkedlist
+    public void displayLL(){
         Node current = head;
-        while(current!= null){
-            System.out.print(current.data+" ");
+        while (current != null) {
+            System.out.println(current.data + "");
             current = current.next;
-
+            
         }
     }
-
     public static void main(String[] args) {
         LinkedList llist = new LinkedList();
-
-        // function calling
-        llist.insertAtEnd(2);
-        llist.insertAtEnd(4);
-        llist.insertAtEnd(8);
-        llist.insertAtEnd(10);
-        llist.insertAtEnd(15);
-
-        System.out.println("Linked List after successful insertion of all the nodes:");
-        llist.printNodes();
+        llist.insertAtEnd(newData:2);
+        llist.insertAtEnd(newData:4);
+        llist.insertAtEnd(newData:8);
+        
+        System.out.println("Before insertion of 10");
+        llist.displayLL();
         System.out.println();
 
-
+        llist.insertAtEnd(newData:10);
+        System.out.println("After insertion of 10");
+        llist.displayLL();
+        System.out.println();
     }
 }
+
+
+
+
+
+
